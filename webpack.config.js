@@ -18,7 +18,10 @@ var config = {
   },
   resolve: {
     alias: {
-      // 'react-switch-button.min.css': path.resolve(MODULE_DIR, 'react-switch-button/dist/react-switch-button.min.css')
+      'TweenLite': path.resolve(MODULE_DIR, 'gsap/src/minified/TweenLite.min.js'),
+      'TweenMax': path.resolve(MODULE_DIR, 'gsap/src/minified/TweenMax.min.js'),
+      'TimelineLite': path.resolve(MODULE_DIR, 'gsap/src/minified/TimelineLite.min.js'),
+      'TimelineMax': path.resolve(MODULE_DIR, 'gsap/src/minified/TimelineMax.min.js')
     }
   },
   module: {
@@ -46,7 +49,7 @@ DEPS.forEach(function(dep) {
   var modName = dep.split(path.sep)[0];
 
   config.resolve.alias[modName] = depPath;
-  config.module.noParse.push(depPath);
+  // config.module.noParse.push(depPath);
 });
 
 module.exports = config;
