@@ -1,0 +1,150 @@
+.clearfix {
+ *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+ display: table;
+ line-height: 0;
+ content: "";
+}
+.clearfix:after {
+ clear: both;
+}
+
+html, body { height:100%; }
+
+#wrapper {
+    width:100%;
+    min-width:320px;
+    height:100%;
+}
+#swipeview-slider > div {
+    position: relative;
+}
+#swipeview-slider span {
+}
+.hide {
+    display: none;
+}
+body{
+    background: url(bg.png);
+}
+#nav {
+    position:fixed;
+    z-index:100;
+    bottom:0;
+    width:63%;
+    height:34px;
+    padding:0 0 0 37%;
+    margin:0 auto;
+}
+
+#nav li {
+    display:block;
+    float: left;
+    width:8px;
+    height:8px; line-height:34px;
+    border-radius:7px;
+    background:#b8b5b2;
+    overflow:hidden;
+    padding:0;
+    margin:13px 11px 0 0;
+    text-align:center;
+}
+
+#nav li.dot.selected {
+    background:#73716f; 
+}
+#nav li#prev {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 48px;
+    height:34px;
+    background: url(bn_prev_0.png);
+    background-size: 48px;
+    border-radius:0;
+}
+#nav li#next {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    float: none;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    right:-1px;
+    width: 48px;
+    height:34px;
+    background: url(bn_next_0.png);
+    background-size: 48px;
+    border-radius:0;
+}
+#nav li#next.theEnd {
+    background: url(bn_next_1.png);
+    background-size:48px;
+}
+h1{
+    color:#666666;
+    text-align: center;
+    text-shadow:0 1px 0 white;
+    font-size: 22px;
+    line-height: 49px;
+}
+h2{
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.4;
+    text-shadow:0 1px 0 white; 
+}
+.box_1{
+    position: relative;
+    padding:8px 20px 0 115px;
+    min-height: 90px;
+    margin: 0 0 1px 0;
+}
+.box_2{
+    margin: 0 5px;
+
+}
+.start_collage{
+    height: 30%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.box_3{
+    margin: 0 20px 5px 15px;
+    padding:7px 0 0 46px;
+    position:relative;
+    min-height: 29px;
+}
+.ic_caption{
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+.im_box_1{
+    width: 84px;
+    position: absolute;
+    left: 20px;
+    top: 0;
+}
+.im_box_2{
+    height: 100%;
+}
+.tip{
+    position: absolute;
+    bottom: 34px;
+    right: 15px;
+}
+
+@media (min-width:519px){
+    #nav {
+        width:58%;
+        padding:0 0 0 42%;
+    }
+}

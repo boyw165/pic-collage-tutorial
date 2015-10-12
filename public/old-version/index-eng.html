@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Pic Collage</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<!--script & css-->
+	<link href="reset.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="style.css" media="all" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="swipeview.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+
+</head>
+
+<body >
+	<div id="wrapper"></div>
+	<ul id="nav">
+		<li class="dot selected" onclick="carousel.goToPage(0)"></li>
+		<li class="dot" onclick="carousel.goToPage(1)"></li>
+		<li class="dot" onclick="carousel.goToPage(2)"></li>
+		<li class="dot" onclick="carousel.goToPage(3)"></li>
+	</ul>
+	<div id="templates" class="hide">
+		<ul>
+			<li>
+				<div class="slide">
+					<div class="box_2">
+						<center><img class="im_box_2" src="tutorial_img01.png" ondragstart="return false;"></center>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="slide">
+					<div class="box_2">
+						<center><img class="im_box_2" src="tutorial_img02.png" ondragstart="return false;"></center>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="slide">
+					<div class="box_2">
+						<center><img class="im_box_2" src="tutorial_img03.png" ondragstart="return false;"></center>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="slide">
+					<div class="box_2" onclick='window.location.href="piccollage://close";'>
+						<center><img class="im_box_2" src="tutorial_img04.png" ondragstart="return false;"></center>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+(function() {
+	console.log(000);
+	Array.prototype.slice.call(document.getElementsByClassName('im_box_2')).forEach(function(el, i) {
+		var width = window.innerWidth;
+		var height = window.innerHeight;
+
+		console.log(111);
+		el.onload = function() {
+			console.log(222);
+			el.height = height;
+			el.width = width;
+		}
+	});
+}());
+</script>
+</body>
+</html>
