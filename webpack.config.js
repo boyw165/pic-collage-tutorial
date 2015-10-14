@@ -21,7 +21,8 @@ var config = {
       'TweenLite': path.resolve(MODULE_DIR, 'gsap/src/minified/TweenLite.min.js'),
       'TweenMax': path.resolve(MODULE_DIR, 'gsap/src/minified/TweenMax.min.js'),
       'TimelineLite': path.resolve(MODULE_DIR, 'gsap/src/minified/TimelineLite.min.js'),
-      'TimelineMax': path.resolve(MODULE_DIR, 'gsap/src/minified/TimelineMax.min.js')
+      'TimelineMax': path.resolve(MODULE_DIR, 'gsap/src/minified/TimelineMax.min.js'),
+      'EasePack': path.resolve(MODULE_DIR, 'gsap/src/minified/easing/EasePack.min.js')
     }
   },
   module: {

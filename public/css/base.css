@@ -45,11 +45,26 @@ img {
 /**
  * The hack way to fit the given image in a bounding.
  **/
-.bounding-box {
+.cover-box {
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.contain-box {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-repeat-x {
+  background-repeat: repeat-x;
 }
 
 .match-parent {
@@ -74,10 +89,20 @@ img {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.full-width {
+  width: 100%;
+}
+
 .full-height {
-  min-height: 100%;
-  height: auto;
-  width: auto;
+  height: 100%;
 }
 
 .next-button {
